@@ -46,7 +46,7 @@ app.post('/todos/:todoId/attachment', async(_req, res) => {
     if(!validItem)
         throw new Error('todo item not exists')
 
-    const url = getUploadUrl(validItem.attachmentUrl)
+    const url = await getUploadUrl(todoID)
 
     res.json({
       uploadUrl: url

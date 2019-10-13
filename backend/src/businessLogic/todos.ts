@@ -66,7 +66,7 @@ export async function deleteTodo(
   return await todoAccess.deleteTodo(userId, todoId)
 }
 
-export function getUploadUrl(todoId:string){
-  return todoAccess.getUploadUrl(todoId)
+export async function getUploadUrl(todoId:string){
+  return await todoAccess.getUploadUrl(todoId)
 }
 

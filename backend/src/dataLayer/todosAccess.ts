@@ -80,8 +80,8 @@ export class TodoAccess {
     })
   }  
 
-  getUploadUrl(todoId:string){
-    return s3.getSignedUrl('putObject', {
+  async getUploadUrl(todoId:string){
+    return await s3.getSignedUrl('putObject', {
       Bucket: this.todosImageBucket,
       Key: todoId,
       Expires: 300
