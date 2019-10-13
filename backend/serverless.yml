@@ -153,10 +153,6 @@ resources:
       Type: AWS::S3::Bucket
       Properties:
         BucketName: ${self:provider.environment.TODOS_IMAGES_S3_BUCKET}
-        # NotificationConfiguration:
-          # TopicConfigurations:
-          #   - Event: s3:ObjectCreated:*
-          #     Topic: !Ref ImagesTopic
         CorsConfiguration:
           CorsRules:
             -
