@@ -14,10 +14,10 @@ const todoAccess = new TodoAccess()
 
 const bucketName = process.env.TODOS_IMAGES_S3_BUCKET
 
-export async function getAllTodos(): Promise<TodoItem[]> {
+export async function getAllTodos(userId: string): Promise<TodoItem[]> {
     try{
         logger.info('[todos] start getAllTodos')
-        return todoAccess.getAllTodos()
+        return todoAccess.getAllTodos(userId)
     }
     catch(e){
         console.log(e.message);

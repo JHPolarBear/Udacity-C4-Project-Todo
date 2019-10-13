@@ -33,7 +33,7 @@ app.post('/todos', async(_req, res) => {
     const todos: TodoItem = await createTodo(newItem, jwtToken)
 
     res.json({
-      todo: todos
+      item: todos
     })
   }
   catch(e)
